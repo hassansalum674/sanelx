@@ -40,6 +40,15 @@ const Navbar = () => {
           >
             Company
           </a>
+          <a
+            href="https://sanelx.com/synex"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link"
+            onClick={() => setIsOpen(false)}
+          >
+            Synex
+          </a>
           {links.map(l => (
             <Link
               key={l.path}

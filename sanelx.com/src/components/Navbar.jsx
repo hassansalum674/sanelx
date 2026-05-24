@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const links = [
     { name: 'Solutions', path: '/solutions' },
+    { name: 'Synex', path: '/synex' },
     { name: 'Methodology', path: '/methodology' },
     { name: 'Security', path: '/security' },
     { name: 'About', path: '/about' },

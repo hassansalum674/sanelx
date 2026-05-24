@@ -13,7 +13,7 @@ const slides = [
     isHero: true,
     title: 'SANELX',
     sub: 'Sovereign Energy Infrastructure.\nStandardizing the future of global energy intelligence.',
-    cta1: { label: 'EXPLORE SOLUTIONS', to: '/solutions', isExternal: false },
+    cta1: { label: 'EXPLORE SYNEX', to: '/synex', isExternal: false },
     cta2: { label: 'INVESTOR PORTAL', to: 'https://ir.sanelx.com', isExternal: true },
   },
   {

@@ -1,4 +1,4 @@
-import{j as e}from"./vendor-motion-BtZkORRR.js";import"./vendor-router-DT3YKpTB.js";import{S as r}from"./SEO-BEW0j65Y.js";import"./index-BkkiuolS.js";const o=()=>e.jsxs("div",{className:"synex-landing-wrapper",children:[e.jsx(r,{title:"Synex | Solar Battery Simulation Software",description:"Cut battery design time from 10 hours to 5 minutes. The simple software tool for solar installers in East Africa.",canonical:"https://sanelx.com/synex"}),e.jsx("style",{children:`
+import{j as e}from"./vendor-motion-BtZkORRR.js";import"./vendor-router-DT3YKpTB.js";import{S as r}from"./SEO-CDRGXzcn.js";import"./index-D7XJBSwa.js";const o=()=>e.jsxs("div",{className:"synex-landing-wrapper",children:[e.jsx(r,{title:"Synex | Solar Battery Simulation Software",description:"Cut battery design time from 10 hours to 5 minutes. The simple software tool for solar installers in East Africa.",canonical:"https://sanelx.com/synex"}),e.jsx("style",{children:`
         .synex-landing-wrapper {
           background-color: #060608;
           color: #ffffff;
