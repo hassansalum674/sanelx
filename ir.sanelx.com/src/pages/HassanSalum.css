@@ -1,0 +1,163 @@
+/* HassanSalum.css - SanelX Founder Page */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/*
+  STICKY FIX: Global index.css sets overflow-x:hidden on html,body
+  which forces body to become the scroll container, breaking position:sticky.
+  overflow:clip does NOT create a new scroll container — sticky works again.
+*/
+body:has(.founder-page-container) {
+  overflow-x: clip !important;
+}
+
+.founder-page-container {
+  background-color: #030303;
+  color: #ffffff;
+  font-family: 'Inter', 'Outfit', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding: 100px 20px 80px;
+  line-height: 1.6;
+}
+
+.founder-page-container h1,
+.founder-page-container h2,
+.founder-page-container h3 {
+  margin: 0 0 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.founder-page-container h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.1;
+  background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.65) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.founder-page-container .subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #a1a1aa;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.founder-page-container h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 15px;
+  margin-top: 60px;
+  text-transform: none;
+}
+
+.founder-page-container h3 {
+  font-size: 1.2rem;
+  color: #e4e4e7;
+  margin-bottom: 12px;
+  text-transform: none;
+}
+
+.founder-page-container p {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  line-height: 1.8;
+  max-width: none;
+}
+
+.founder-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ── HERO ── */
+.founder-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.founder-hero-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  filter: none;
+  transition: filter 0.6s ease;
+}
+.founder-hero-image img:hover { filter: none; }
+
+.tagline {
+  font-style: italic;
+  font-size: 1.35rem !important;
+  color: rgba(255,255,255,0.85) !important;
+  border-left: 3px solid rgba(255,255,255,0.4);
+  padding-left: 20px;
+  margin: 36px 0;
+  line-height: 1.6 !important;
+  max-width: none !important;
+}
+
+/* ── TIMELINE ── */
+.founder-timeline {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* STICKY portrait */
+.founder-portrait {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+}
+
+.founder-portrait img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: block;
+}
+
+.founder-story {
+  min-height: 0;
+}
+
+/* ── CARDS ── */
+.founder-card {
+  background: rgba(255, 255, 255, 0.018);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  padding: 36px 40px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  margin-bottom: 18px;
+}
+.founder-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.035);
+  border-color: rgba(255,255,255,0.12);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .founder-hero,
+  .founder-timeline {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .founder-portrait {
+    position: relative;
+    top: auto;
+  }
+}

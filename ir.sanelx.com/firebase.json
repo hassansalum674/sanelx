@@ -1,0 +1,21 @@
+{
+  "hosting": [
+    {
+      "target": "ir-sanelx",
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false
+    }
+  ]
+}

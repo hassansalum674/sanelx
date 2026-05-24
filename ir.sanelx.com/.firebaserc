@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "sanelx-a681c"
+  },
+  "targets": {
+    "sanelx-a681c": {
+      "hosting": {
+        "ir-sanelx": [
+          "ir-sanelx"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

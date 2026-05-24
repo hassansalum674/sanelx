@@ -1,0 +1,158 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
+
+const Terms = () => {
+  const sections = [
+    {
+      title: "1. Introduction",
+      content: "Welcome to SanelX. These Terms of Use govern your access to and use of the SanelX website and any related services, platforms, or applications (collectively, the “Services”). By accessing or using SanelX, you agree to be bound by these Terms."
+    },
+    {
+      title: "2. About SanelX",
+      content: "SanelX is an energy intelligence company that develops systems designed to optimize modern energy infrastructure, including solar generation, battery storage, and energy usage systems.",
+      items: [
+        "Informational website content",
+        "Analytical tools and system interfaces",
+        "Simulation and decision-support systems",
+        "Future platform access via app.sanelx.com"
+      ]
+    },
+    {
+      title: "3. Eligibility and Use",
+      content: "You must use the Services only for lawful purposes. You agree not to:",
+      items: [
+        "Misuse the platform or attempt unauthorized access",
+        "Interfere with system functionality",
+        "Use the Services to develop competing systems",
+        "Introduce malicious code, scripts, or harmful activity"
+      ]
+    },
+    {
+      title: "4. Accounts (Future Use)",
+      content: "Certain features may require user accounts. You are responsible for:",
+      items: [
+        "Maintaining the confidentiality of your credentials",
+        "All activity under your account",
+        "Providing accurate and complete information"
+      ]
+    },
+    {
+      title: "5. Intellectual Property",
+      content: "All content, systems, software, designs, and materials are owned by SanelX or its licensors, including:",
+      items: [
+        "Platform logic and systems",
+        "Visual assets and design",
+        "Branding and identity"
+      ],
+      footer: "You may not copy, reproduce, reverse engineer, or create derivative works."
+    },
+    {
+      title: "6. Data and Platform Use",
+      content: "You retain ownership of any data you provide, but grant SanelX a limited right to process that data to deliver Services. SanelX may also generate aggregated, anonymized, and system-level insights."
+    },
+    {
+      title: "7. No Professional Guarantees",
+      content: "SanelX provides analytical and decision-support systems. The Services do not guarantee outcomes, nor do they replace professional engineering or financial advice. All decisions remain the responsibility of the user."
+    },
+    {
+      title: "8. Disclaimer of Warranties",
+      content: "The Services are provided “as is” and “as available”. SanelX does not guarantee uninterrupted operation, error-free performance, or complete accuracy of outputs."
+    },
+    {
+      title: "9. Limitation of Liability",
+      content: "To the maximum extent permitted by law, SanelX is not liable for indirect or consequential damages, loss of data, revenue, or decisions made based on system outputs."
+    },
+    {
+      title: "10. Third-Party Services",
+      content: "SanelX is not responsible for the content, availability, or practices of any third-party tools or services integrated or linked within the Services."
+    },
+    {
+      title: "11. Suspension and Termination",
+      content: "SanelX may suspend or terminate access if Terms are violated or security risks are detected. Upon termination, access must stop immediately."
+    },
+    {
+      title: "12. Modifications",
+      content: "SanelX may update these Terms at any time. Continued use of the Services indicates acceptance of updates."
+    },
+    {
+      title: "13. Governing Law",
+      content: "These Terms are governed by applicable international laws and jurisdictions."
+    },
+    {
+      title: "14. Contact",
+      content: "For questions regarding these Terms, please contact us at info@sanelx.com."
+    }
+  ];
+
+  return (
+    <div style={{ background: '#000', color: '#fff', minHeight: '100vh', padding: '12rem 5vw 8rem' }}>
+      <SEO 
+        title="Terms of Use | SanelX"
+        description="SanelX Terms of Use. Read our terms governing the use of our services and platform."
+        canonical="https://sanelx.com/terms"
+      />
+      
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1rem', textTransform: 'uppercase' }}
+        >
+          Terms of Use
+        </motion.h1>
+        
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.5)', marginBottom: '4rem', fontWeight: 600 }}
+        >
+          Effective Date: March 29, 2026
+        </motion.p>
+
+        <div className="terms-content">
+          {sections.map((section, idx) => (
+            <motion.div 
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.05 }}
+              style={{ marginBottom: '4rem' }}
+            >
+              <h2 style={{ fontSize: '1.5rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.5rem', color: '#fff' }}>
+                {section.title}
+              </h2>
+              
+              {section.content && (
+                <p style={{ fontSize: '1.2rem', lineHeight: '1.7', color: 'rgba(255,255,255,0.8)', marginBottom: '1rem', fontWeight: 600 }}>
+                  {section.content}
+                </p>
+              )}
+
+              {section.items && (
+                <ul style={{ listStyle: 'none', padding: 0 }}>
+                  {section.items.map((item, i) => (
+                    <li key={i} style={{ fontSize: '1.2rem', lineHeight: '1.7', color: 'rgba(255,255,255,0.8)', marginBottom: '0.5rem', fontWeight: 600, paddingLeft: '1.5rem', position: 'relative' }}>
+                      <span style={{ position: 'absolute', left: 0, color: 'rgba(255,255,255,0.3)' }}>—</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {section.footer && (
+                <p style={{ fontSize: '1.2rem', lineHeight: '1.7', color: 'rgba(255,255,255,0.8)', marginTop: '1rem', fontWeight: 600 }}>
+                  {section.footer}
+                </p>
+              )}
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Terms;
