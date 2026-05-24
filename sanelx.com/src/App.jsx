@@ -42,11 +42,13 @@ function ScrollToTop() {
   return null;
 }
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isSynex = location.pathname === '/synex';
+
   return (
-    <Router>
-      <ScrollToTop />
-      <Navbar />
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      {!isSynex && <Navbar />}
       <main style={{ flex: 1 }}>
         <Suspense fallback={<PageLoader />}>
           <Routes>
@@ -64,7 +66,16 @@ function App() {
           </Routes>
         </Suspense>
       </main>
-      <Footer />
+      {!isSynex && <Footer />}
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <AppContent />
     </Router>
   );
 }
