@@ -320,6 +320,7 @@ const Synex = () => {
           position: relative;
           display: flex;
           flex-direction: column;
+          height: 100%;
           background: rgba(255, 255, 255, 0.02);
           border: 1px solid rgba(255, 255, 255, 0.08);
           border-radius: 10px;
@@ -419,6 +420,9 @@ const Synex = () => {
           left: 0;
           color: #10b981;
           font-weight: 700;
+        }
+        .synex-plan-foot {
+          margin-top: auto;
         }
         .synex-plan-best {
           font-size: 0.75rem;
@@ -651,17 +655,19 @@ const Synex = () => {
                   <li key={feature}>{feature}</li>
                 ))}
               </ul>
-              <div className="synex-plan-best">Best for: {plan.bestFor}</div>
-              <a
-                href={plan.href}
-                target={plan.contact ? undefined : '_blank'}
-                rel={plan.contact ? undefined : 'noopener noreferrer'}
-                className={`synex-plan-cta ${
-                  plan.featured ? 'emerald' : plan.contact ? 'outline' : 'solid'
-                }`}
-              >
-                {plan.cta} →
-              </a>
+              <div className="synex-plan-foot">
+                <div className="synex-plan-best">Best for: {plan.bestFor}</div>
+                <a
+                  href={plan.href}
+                  target={plan.contact ? undefined : '_blank'}
+                  rel={plan.contact ? undefined : 'noopener noreferrer'}
+                  className={`synex-plan-cta ${
+                    plan.featured ? 'emerald' : plan.contact ? 'outline' : 'solid'
+                  }`}
+                >
+                  {plan.cta} →
+                </a>
+              </div>
             </article>
           ))}
         </div>
