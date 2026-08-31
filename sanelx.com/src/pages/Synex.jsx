@@ -673,9 +673,9 @@ const Te = async (M, L = {}, I = 1500) => {
       [m, Ne] = t.useState("monthly"),
       Se = 0.93,
       E = {
-        starter: { monthly: 14 },
-        professional: { monthly: 29 },
-        business: { monthly: 59 },
+        starter: { monthly: 29 },
+        professional: { monthly: 59 },
+        business: { monthly: 149 },
       },
       x = (r) => {
         if (!E[r]) return 0;
@@ -4357,7 +4357,7 @@ const Te = async (M, L = {}, I = 1500) => {
                 e.jsx("h2", { children: "Early-Beta Pricing" }),
                 e.jsx("p", {
                   children:
-                    "Starter $14, Professional $29, and Business $59. Enterprise is custom — contact sales. Lock in early-beta pricing for the commercial solar engineering stack.",
+                    "Starter $29, Professional $59, and Business $149. Enterprise is custom — contact sales. Lock in early-beta pricing for the commercial solar engineering stack.",
                 }),
                 e.jsxs("div", {
                   className: "billing-toggle",
